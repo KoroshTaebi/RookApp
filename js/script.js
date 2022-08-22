@@ -37,6 +37,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
           while (!allowedPrices.includes(parseInt(currentBuyingPrice)));
           cell4.innerHTML = currentBuyingPrice;
 
+          do {
+             var oppositionPoints = prompt("how much did the others get?");
+          }
+          while (!allowedPrices.includes(parseInt(oppositionPoints)));
+
     });
 });
 
