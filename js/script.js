@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     var playerNames = [Team1.Player1, Team1.Player2, Team2.Player1, Team2.Player2];
     const Mul = arr => arr.map(item => item * 5);
-    const allowedPrices = Mul(Array.from({length:33},(v,k)=>k+1));
+    const allowedPrices = Mul(Array.from(Array(34).keys()));
     var roundNumber = 0
 
     document.querySelector("button").addEventListener("click", function (event) {
