@@ -20,8 +20,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
           var newRow = tbodyRef.insertRow(0);
           var cell1 = newRow.insertCell(0);
           var cell2 = newRow.insertCell(1);
-          var cell3 = newRow.insertCell(2)
-          var cell4 = newRow.insertCell(3)
+          var cell3 = newRow.insertCell(2);
+          var cell4 = newRow.insertCell(3);
+          var cell5 = newRow.insertCell(4);
           cell1.innerHTML = roundNumber;
           roundNumber += 1;
           cell2.innerHTML = Date(Date.now());
@@ -41,6 +42,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
              var oppositionPoints = prompt("how much did the others get?");
           }
           while (!allowedPrices.includes(parseInt(oppositionPoints)));
+
+          if (parseInt(currentBuyingPrice) + parseInt(oppositionPoints) > 165) {
+              console.log(currentBuyingPrice + oppositionPoints )
+              cell5.innerHTML = "-";
+          }
+          else {
+              cell5.innerHTML = "+";
+          }
 
     });
 });
