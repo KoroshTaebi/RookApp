@@ -25,7 +25,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
           var cell5 = newRow.insertCell(4);
           cell1.innerHTML = roundNumber;
           roundNumber += 1;
-          cell2.innerHTML = Date(Date.now());
+
+          var current_date = new Date().toLocaleString('de-DE');
+          cell2.innerHTML = current_date;
+
           do {
               var currentBuyer = prompt("Who bought?");
           }
@@ -56,4 +59,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
           }
     });
 });
-
