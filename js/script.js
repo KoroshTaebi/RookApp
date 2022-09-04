@@ -43,14 +43,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
           }
           while (!allowedPrices.includes(parseInt(oppositionPoints)));
 
-          if (parseInt(currentBuyingPrice) + parseInt(oppositionPoints) > 165) {
-              console.log(currentBuyingPrice + oppositionPoints )
-              cell5.innerHTML = "-";
+          if (parseInt(oppositionPoints) == 0) {
+              cell5.innerHTML = "&#9733;";
           }
           else {
-              cell5.innerHTML = "+";
+              if (parseInt(currentBuyingPrice) + parseInt(oppositionPoints) > 165) {
+                  cell5.innerHTML = "-";
+              }
+              else {
+                  cell5.innerHTML = "+";
+              }
           }
-
     });
 });
 
